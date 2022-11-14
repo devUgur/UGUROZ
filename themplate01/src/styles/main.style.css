@@ -1,0 +1,10 @@
+body{
+    margin: 0;
+    background: var(--purple);
+}
+
+.blur{
+    /*background-color: rgba(8, 14, 14, 0.85);*/
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}

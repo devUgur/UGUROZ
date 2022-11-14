@@ -1,5 +1,8 @@
 import { createStore } from 'vuex'
 
+// Import Store Modules
+import styleStore from "@/store/modules/style.store";
+
 export default createStore({
   state: {
   },
@@ -8,5 +11,6 @@ export default createStore({
   actions: {
   },
   modules: {
+    style: styleStore,
   }
 })

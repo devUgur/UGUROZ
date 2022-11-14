@@ -11,7 +11,7 @@ const state = {
     brightnessMode: null, // dark, light
 }
 
-// Getter functions
+// Getters
 const getters = {
     transitionName: state => {
         return state.transitionName;
