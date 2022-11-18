@@ -39,6 +39,8 @@ export default {
   display: flex;
   place-items: center;
   justify-content: space-between;
+
+  z-index: 1000;
 }
 
 .side-content{
@@ -64,5 +66,11 @@ export default {
 
 #topnav-component a.router-link-exact-active {
   color: var(--white);
+}
+
+@media(max-width: 769px) {
+  .mid-content{
+    display: none !important;
+  }
 }
 </style>

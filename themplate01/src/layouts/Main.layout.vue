@@ -3,7 +3,7 @@
     <topnav-component></topnav-component>
     <div class="body-layout">
       <div class="sidebar-layout">
-        <VerticalEmailComponent></VerticalEmailComponent>
+       <VerticalEmailComponent></VerticalEmailComponent>
       </div>
       <div class="view-layout">
         <IntroView></IntroView>
@@ -11,20 +11,27 @@
       </div>
       <div class="sidebar-layout"></div>
     </div>
+    <div class="footer-layout">
+      <FooterComponent></FooterComponent>
+    </div>
   </div>
 </template>
 
 <script>
 import TopnavComponent from '@/components/navigation/topnav.component';
+import FooterComponent from "@/components/footer/footer.component";
 
 import IntroView from '@/views/main/Intro.view';
 import AboutView from '@/views/main/About.view';
 
 import VerticalEmailComponent from '@/components/sidebars/VerticalEmail.component';
 
+
 export default {
   components: {
     TopnavComponent,
+    FooterComponent,
+
     IntroView,
     AboutView,
 
@@ -34,6 +41,7 @@ export default {
 </script>
 
 <style scoped>
+
 .body-layout{
   display: flex;
   min-height: 200vh;
@@ -69,7 +77,7 @@ export default {
 
 @media(max-width: 769px) {
   .sidebar-layout{
-    display: none;
+    display: none !important;
   }
 }
 </style>

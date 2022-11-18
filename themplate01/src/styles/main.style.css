@@ -1,6 +1,13 @@
+:root{
+    --transition-delay: 0.7s;
+}
+
 body{
     margin: 0;
-    background: var(--purple);
+    background: linear-gradient(to bottom, #036564, #033649);
+    /*background: linear-gradient(to bottom, #556270, #C44D58);*/
+    /* background: linear-gradient(5deg, #036564, #033649); */
+    /* background: linear-gradient(5deg, #036564, #033649); */
 }
 
 .blur{

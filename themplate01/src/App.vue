@@ -2,6 +2,14 @@
   <router-view/>
 </template>
 
+<script>
+export default {
+  mounted() {
+    this.$store.dispatch('device/init');
+  }
+}
+</script>
+
 <style>
 
 @import './styles/colors.style.css';

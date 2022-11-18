@@ -1,7 +1,7 @@
 <template>
-  <h4 id="vertical-email">
+  <h3 id="vertical-email">
     devUgur@icloud.com
-  </h4>
+  </h3>
 </template>
 
 <script>
@@ -13,8 +13,8 @@ export default {
 <style scoped>
 #vertical-email{
   writing-mode: vertical-rl;
-  text-orientation: upright;
-  letter-spacing: -5px;
+  /*text-orientation: upright;*/
+  text-transform: uppercase;
 }
 
 #vertical-email:hover{
