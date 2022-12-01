@@ -16,15 +16,13 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
+  background-color: #182626;
   height: 500px;
-
   padding: 0 5%;
 }
 
 .footer-foot{
   height: 60px;
-
   background-color: #2c3e50;
 }
 </style>

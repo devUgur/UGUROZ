@@ -1,10 +1,15 @@
 :root{
-    --transition-delay: 0.7s;
+    --transition: 0.5s;
+
+    /* box-shadows */
+    --box-shadow-1: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    --box-shadow-2: rgba(0, 0, 0, 0.35) 5px 5px 15px;
 }
 
 body{
     margin: 0;
-    background: linear-gradient(to bottom, #036564, #033649);
+    background: #111c1c;
+    /* background: linear-gradient(to bottom, #036564, #033649); */
     /*background: linear-gradient(to bottom, #556270, #C44D58);*/
     /* background: linear-gradient(5deg, #036564, #033649); */
     /* background: linear-gradient(5deg, #036564, #033649); */
@@ -14,4 +19,14 @@ body{
     /*background-color: rgba(8, 14, 14, 0.85);*/
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
+}
+
+.dark-blur{
+    background-color: rgba(8, 14, 14, 0.85);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
+
+.view-content{
+    padding: 30px;
 }

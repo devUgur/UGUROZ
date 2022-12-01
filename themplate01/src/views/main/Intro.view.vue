@@ -1,6 +1,6 @@
 <template>
   <div id="intro-view">
-    <particles-bg-component id="particles"></particles-bg-component>
+    <!-- <particles-bg-component id="particles"></particles-bg-component> -->
   </div>
 </template>
 

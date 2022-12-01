@@ -1,19 +1,18 @@
 <template>
-  <div id="about-view">
-    <h3> About me </h3>
-
+  <div id="blogView">
+    <h3> My blog </h3>
   </div>
 </template>
 
 <script>
 export default {
-  name: "AboutView"
+  name: "BlogView"
 }
 </script>
 
 <style scoped>
-#about-view{
+#blogView{
+  min-height: 100vh;
   border-top: 1px dotted white;
-  height: 100vh;
 }
 </style>

@@ -4,12 +4,21 @@
       <TextLogoComponent></TextLogoComponent>
     </div>
     <div class="mid-content">
-      <router-link to="/">Home</router-link>
-      <router-link to="/">About</router-link>
-      <router-link to="/">Work</router-link>
-      <router-link to="/">Contact</router-link>
+
     </div>
-    <div class="side-content"></div>
+    <div class="side-content">
+      <div class="vertical-list">
+        <router-link to="/">Intro</router-link>
+        <router-link to="/about">About</router-link>
+        <router-link to="/work">Work</router-link>
+        <router-link to="/contact">Contact</router-link>
+        <router-link to="/blog">Blog</router-link>
+      </div>
+
+      <div class="menu-item">
+        <button id="menu-btn"> MENU </button>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -21,10 +30,15 @@ export default {
   },
   mounted() {
     window.addEventListener('scroll', () => {
-      if(window.scrollY >= 60 ){
-        this.$refs.topnav.classList.add('blur');
+      if(window.scrollY > 60 ){
+        this.$refs.topnav.classList.add('dark-blur');
+        this.$refs.topnav.style.height = "60px";
       }else{
-        this.$refs.topnav.classList.remove('blur');
+        setTimeout( () => {
+
+        },500);
+        this.$refs.topnav.classList.remove('dark-blur');
+        this.$refs.topnav.style.height = "120px";
       }
     })
   }
@@ -34,12 +48,13 @@ export default {
 <style scoped>
 #topnav-component {
   position: fixed;
-  height: 60px;
+  height: 120px;
   width: 100%;
   display: flex;
   place-items: center;
   justify-content: space-between;
-
+  top: 0;
+  transition: all var(--transition);
   z-index: 1000;
 }
 
@@ -50,27 +65,64 @@ export default {
 }
 
 .side-content:first-of-type{
-  border-right: 1px dotted var(--white);
+  max-width: 400px;
+  /** border-right: 1px dotted var(--white); **/
+  display: flex;
+  justify-content: center;
+  place-items: center;
 }
 
 .side-content:last-of-type{
-  border-left: 1px dotted var(--white);
+  max-width: 500px;
+  width: 100%;
+  /** border-left: 1px dotted var(--white); **/
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  margin-right: 100px;
 }
 
-#topnav-component a {
+.side-content a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #76828f;
   text-decoration: none;
   margin: 0 10px;
+}
+
+#topnav-component a:hover{
+  color: #dae2ea;
+  transition: var(--transition);
 }
 
 #topnav-component a.router-link-exact-active {
   color: var(--white);
 }
 
+#menu-btn{
+  display: none;
+  background: none;
+  border: none;
+  color: #dae2ea;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 @media(max-width: 769px) {
   .mid-content{
     display: none !important;
+  }
+
+  .side-content:last-of-type{
+    margin-right: 0;
+  }
+
+  .vertical-list{
+    display: none;
+  }
+
+  #menu-btn{
+    display: flex;
   }
 }
 </style>
